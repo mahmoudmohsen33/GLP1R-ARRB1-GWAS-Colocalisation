@@ -1,7 +1,5 @@
 # Genetic dissection of GLP-1 signalling reveals distinct regulatory mechanisms at GLP1R and ARRB1 influencing insulin secretion in type 2 diabetes
 
-# GLP1R-ARRB1 GWAS Colocalisation Analysis
-
 This repository contains the code used for integrative genetic analysis of GLP1R and ARRB1 loci in insulin-related traits.
 
 ## Overview
