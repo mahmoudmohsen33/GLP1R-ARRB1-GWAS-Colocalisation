@@ -1,63 +1,44 @@
 # Genetic dissection of GLP-1 signalling reveals distinct regulatory mechanisms at GLP1R and ARRB1 influencing insulin secretion in type 2 diabetes
 
+# GLP1R-ARRB1 GWAS Colocalisation Analysis
+
+This repository contains the code used for integrative genetic analysis of GLP1R and ARRB1 loci in insulin-related traits.
+
 ## Overview
+We analysed GWAS summary statistics for nine insulin-related traits to:
+- Estimate SNP-based heritability and genetic correlations (LDSC)
+- Perform locus-specific association analysis
+- Conduct Bayesian colocalisation (coloc)
+- Perform fine-mapping (SuSiE)
+- Integrate functional annotation (VEP, HaploReg, RegulomeDB)
 
-This repository contains a complete bioinformatics pipeline for:
+## Key Findings
+- GLP1R shows a diffuse association pattern
+- ARRB1 shows structured genetic architecture
+- Fine-mapping identified two candidate causal variants:
+  - rs899115
+  - rs1789685
 
-* Multi-trait GWAS analysis (MAGIC consortium)
-* Genetic correlation using LDSC
-* Regional association analysis (GLP1R & ARRB1 loci)
-* Colocalization analysis with GTEx eQTL data
-* Functional annotation (VEP, CADD, SIFT, PolyPhen)
-* Candidate variant prioritization
+## Data Sources
+- OpenGWAS: https://gwas.mrcieu.ac.uk/
+- MAGIC consortium (Chen et al., 2021)
+- GTEx v8
 
----
+## Pipeline
 
-## Biological Motivation
+1. Data harmonisation
+2. LDSC heritability & correlation
+3. Regional association analysis
+4. Colocalisation (coloc)
+5. Fine-mapping (susieR)
+6. Functional annotation
 
-GLP1R and ARRB1 are key regulators of insulin secretion and GLP-1 signaling pathways.
-This project aims to:
+## Reproducibility
 
-* Identify shared genetic signals between GWAS traits and gene expression
-* Distinguish regulatory mechanisms at each locus
-* Prioritize functional variants influencing type 2 diabetes
+To reproduce results:
 
----
-
-## ⚙️ Pipeline Overview
-
-1. **GWAS Data Processing**
-
-   * Import VCF (MAGIC)
-   * Clean and harmonize summary statistics
-
-2. **Genetic Correlation (LDSC)**
-
-   * Estimate trait–trait correlations
-   * Visualize correlation matrix
-
-3. **Regional Analysis**
-
-   * Extract loci:
-
-     * GLP1R (chr6)
-     * ARRB1 (chr11)
-
-4. **Colocalization (COLOC)**
-
-   * Integrate GWAS with GTEx eQTL
-   * Compute posterior probabilities (PP.H4)
-
-5. **Functional Annotation**
-
-   * Variant Effect Predictor (VEP)
-   * CADD, SIFT, PolyPhen scores
-
-6. **Visualization**
-
-   * Regional association plots
-   * Heatmaps and candidate tables
-
+```bash
+Rscript scripts/run_pipeline.R
 ---
 
 ## Project Structure
@@ -108,9 +89,5 @@ Nile University – Bioinformatics
 
 ---
 
-##  Notes
-
-* GTEx Portal filtered data is **not suitable for colocalization**
-* Use **GTEx allpairs files** for full analysis
 
 ---
