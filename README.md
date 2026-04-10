@@ -69,23 +69,12 @@ Set your OpenGWAS token:
 Sys.setenv(OPENGWAS_JWT = Sys.getenv("OPENGWAS_JWT"))
 ```
 
----
-
-## Output
-
-* Genetic correlation matrix
-* Colocalization results (PP.H4)
-* Candidate variant table
-* Publication-ready figures
-
----
 
 ## Author
 
 Mahmoud M. Omran
 Nile University – Bioinformatics
 
----
 
 
 ---
